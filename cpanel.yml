@@ -1,4 +1,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=public_html
-    - /bin/cp -r * $DEPLOYPATH
+    - echo "Iniciando deploy para $DEPLOYPATH" > /home/improve/deploy.log
+    - /bin/ls -la >> /home/improve/deploy.log
+    - /bin/cp -rv * $DEPLOYPATH >> /home/improve/deploy.log 2>&1
+    - echo "Finalizado em $(date)" >> /home/improve/deploy.log
