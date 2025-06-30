@@ -1,5 +1,4 @@
-
 deployment:
   tasks:
-    - export DEPLOYPATH=public_html/cyberdrill.com.br
+    - export DEPLOYPATH=public_html
     - /bin/cp -r * $DEPLOYPATH
